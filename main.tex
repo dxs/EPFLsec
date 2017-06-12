@@ -1,0 +1,52 @@
+\documentclass[12pt]{report}
+
+%USEPACKAGE
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[breakable, theorems, skins]{tcolorbox}
+\usepackage{subfiles}
+\usepackage{url}
+\usepackage{xcolor}
+
+%OWN OBJECTS
+\DeclareRobustCommand{\code}[2][gray!20]{%
+	\begin{tcolorbox}[   %% Adjust the following parameters at will.
+		breakable,
+		left=0pt,
+		right=0pt,
+		top=0pt,
+		bottom=0pt,
+		colback=#1,
+		colframe=#1,
+		width=\dimexpr\textwidth\relax, 
+		enlarge left by=0mm,
+		boxsep=5pt,
+		arc=0pt,outer arc=0pt,
+		]
+		#2
+	\end{tcolorbox}
+}
+
+%PATHS
+\graphicspath{{images/}{../images/}}
+
+%TITLE
+\title{EPFL internal security}
+\author{Sven Borden}
+\date{\today}
+
+%DOCUMENT
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\clearpage
+	\chapter{STI servers}
+	\subfile{sections/STIservers}
+	\chapter{Mail}
+	\subfile{sections/MAIL}
+\end{document}

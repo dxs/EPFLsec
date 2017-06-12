@@ -1,0 +1,25 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+	\section{CATIA}
+	
+	Student from STI must install CATIA V5R20 from the first year at EPFL. As the license is provided from EPFL, they need to log onto two servers (\url{\\stisrv\app} \& \url{\\stisrv\CATIA}). For some obscure reason, thoses servers require the user to do a list of action. 
+	\begin{enumerate}
+		\item Connect with the \url{COMPUTER\Administrator} account
+		\item Stop Anti-Virus services
+		\item Turn off Windows Firewall
+		\item Mounting disk with the right local drive
+	\end{enumerate}
+	Each of those action have security issues and/or bad implementations that could have been improved since things have not changed since 2014. We will have a quick look at those parts on the next sections
+
+	\subsection{Disable Anti-Virus services}
+	Not sure what to tell here, actually it looks pretty obvious that disable anti-virus software, even if they will be restarted at next reboot, more and more people doesn't reboot their computer for days or weeks. We not updating the procedure to force people enable back anti-virus after CATIA's install. 
+	An other direction would be to work with MacAffee to understand why CATIA have trouble with their anti-virus. Other software as the basic Windows Defender doesn't give any problems at CATIA install, even if they are running.
+	
+	\subsection{Windows Firewall}
+	Windows Firewall is disable for installation purposes, but if it stay down, it could turn in security problem very fast. Number of attacks happen through a not protected environment, and the Firewall is the first of them. Please add a huge section asking people to turn on their Firewall
+	
+	\subsection{Mount local drive}
+	Here there is no security issue. It is a user experience issue, as it is a script written by a dumb guy, if the user doesn't mount a disk on his local drive as $I:$ and $R:$, the installation fails as soon as it start. Please update the script, EPFL has lots of brilliant people!
+\end{document}
+
